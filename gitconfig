@@ -1,0 +1,26 @@
+[user]
+	name = Tony DiPasquale
+	email = tony@thoughtbot.com 
+[core]
+	excludesfile = /Users/tony/.global_ignore
+	editor = vim
+[alias]
+  tits = commit -av
+  tit = commit -v
+  a = add .
+  co = checkout
+  s = status
+  st = status -sb
+  fix = commit --amend -v
+  m = merge --ff-only
+  logs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[push]
+	default = simple
+[color]
+	ui = 1
+[credential]
+    helper = osxkeychain
+[help]
+	autocorrect = 1
+[fetch]
+  prune = true
