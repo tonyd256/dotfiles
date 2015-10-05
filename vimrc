@@ -21,8 +21,6 @@ let g:lightline = {
 
 set guifont=Inconsolata
 
-set t_Co=256
-
 syntax enable
 filetype plugin indent on
 
