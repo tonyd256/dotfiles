@@ -105,6 +105,12 @@ defaults write com.apple.iTunes disablePing -bool true
 echo "Make ⌘ + F focus the search input in iTunes"
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
+echo "Disable ImageCapture hot plug"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+
+echo "Fix random [ characters the appear when using Terminal.app"
+defaults write com.apple.Terminal AutoMarkPromptLines -bool false
+
 echo "Show the ~/Library folder"
 chflags nohidden ~/Library
 
