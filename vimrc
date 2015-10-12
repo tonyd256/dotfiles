@@ -8,6 +8,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'gcmt/wildfire.vim'
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -25,7 +26,7 @@ syntax enable
 filetype plugin indent on
 
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 
 let mapleader = " "
 
