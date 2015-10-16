@@ -24,5 +24,3 @@
 	autocorrect = 1
 [fetch]
   prune = true
-[http]
-	proxy = http://proxy-us.intel.com:911
