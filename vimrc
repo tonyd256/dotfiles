@@ -13,7 +13,7 @@ Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized_dark',
+      \ 'colorscheme': 'jellybeans',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
