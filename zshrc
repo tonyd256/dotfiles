@@ -49,13 +49,14 @@ export PS1='
 %{$fg[cyan]%}%m: %{$fg[yellow]%}$(get_pwd)$(put_spacing)$(git_prompt_info)
 %{$fg[blue]%}→%{$reset_color%} '
 
-
-# load our own completion functions
-fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
-
 # completion
 autoload -U compinit
 compinit
+
+# load our own completion functions
+for completion in ~/.zsh/completions/*; do
+  source $completion
+done
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
