@@ -5,8 +5,8 @@
 	excludesfile = /Users/tony/.global_ignore
 	editor = vim
 [alias]
-  tits = commit -av
-  tit = commit -v
+  ca = commit -av
+  c = commit -v
   a = add .
   co = checkout
   s = status
