@@ -86,6 +86,10 @@ setopt extendedglob
 # Allow [ or ] whereever you want
 unsetopt nomatch
 
+# Allow case insensitive tab completion
+setopt +o menucomplete
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
