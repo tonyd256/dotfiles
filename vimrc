@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'gcmt/wildfire.vim'
 Plug 'nanotech/jellybeans.vim'
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 call plug#end()
 
