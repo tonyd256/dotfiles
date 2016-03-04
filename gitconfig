@@ -13,7 +13,9 @@
   st = status -sb
   fix = commit --amend -v
   m = merge --ff-only
+  mm = merge --ff-only -
   logs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  f = push --force-with-lease
 [push]
 	default = simple
 [color]
