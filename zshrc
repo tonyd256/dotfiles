@@ -108,6 +108,9 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# load ruby stuff
+eval "$(rbenv init -)"
+
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
