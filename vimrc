@@ -10,6 +10,8 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'gcmt/wildfire.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'keith/swift.vim'
+Plug 'gfontenot/vim-xcode'
 
 call plug#end()
 
@@ -116,3 +118,10 @@ augroup vimrcEx
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
+
+" Swift vim
+let g:xcode_run_command = 'VtrSendCommandToRunner! {cmd}'
+let g:xcode_xcpretty_testing_flags = '--test'
+
+nnoremap <leader>b :XBuild<CR>
+nnoremap <leader>u :XTest<CR>
