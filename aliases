@@ -4,6 +4,7 @@ alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData/'
 alias slay='lldb --repl'
 alias co-pr="!f() { git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 alias e="$EDITOR"
+alias gpg=gpg2
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
