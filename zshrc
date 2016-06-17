@@ -147,5 +147,8 @@ _load_settings "$HOME/.zsh/configs"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash zsh)"
