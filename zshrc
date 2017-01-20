@@ -152,6 +152,3 @@ PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash zsh)"
-
-source /usr/local/opt/chswift/share/chswift/chswift.sh
-source /usr/local/opt/chswift/share/chswift/auto.sh

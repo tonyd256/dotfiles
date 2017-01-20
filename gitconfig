@@ -10,6 +10,7 @@
   c = commit -v
   a = add .
   co = checkout
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   s = status
   st = status -sb
   fix = commit --amend -v

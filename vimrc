@@ -5,13 +5,17 @@ call plug#begin('~/.vim/bundle')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-commentary'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'gcmt/wildfire.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'keith/swift.vim'
 Plug 'gfontenot/vim-xcode'
+Plug 'scrooloose/syntastic'
+Plug 'flowtype/vim-flow'
+Plug 'mxw/vim-jsx'
+Plug 'moll/vim-node'
+Plug 'vim-scripts/tComment'
 
 call plug#end()
 
@@ -125,3 +129,14 @@ let g:xcode_xcpretty_testing_flags = '--test'
 
 nnoremap <leader>b :XBuild<CR>
 nnoremap <leader>u :XTest<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:flow#autoclose = 1
