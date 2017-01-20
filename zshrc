@@ -147,7 +147,7 @@ _load_settings "$HOME/.zsh/configs"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-
+EDITOR=vi
 PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 export PATH="$HOME/.bin:$PATH"

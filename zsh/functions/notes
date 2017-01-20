@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+
+PROJECTS_DIR=${PROJECTS_DIR:-~/.projects}
+
+new-project() {
+  project="$1"
+  if [ -z "$project" ]; then
+    echo "project expected" >&2
+    return 1
+  fi
+
+  datestamp=$(date +"%F")
+  tempfile="$(mktemp -t note).md"
+  $EDITOR "$tempfile"
+  mkdir -p "$PROJECTS_DIR/$project"
+  cat "$tempfile" >> "$PROJECTS_DIR/$project/$datestamp.md"
+  echo >> "$PROJECTS_DIR/$project/$datestamp.md"
+}
+
+browse-project() {
+  project="$1"
+  if [ -z "$project" ]; then
+    echo "project expected" >&2
+    return 1
+  fi
+
+  open "$PROJECTS_DIR/$project"
+}
+
+jekt() {
+  case "$1" in
+    ("new")
+      new-project "${@:2}"
+      ;;
+    ("browse")
+      browse-project "${@:2}"
+      ;;
+    (*)
+      echo "command expected" >&2
+      return 1
+      ;;
+  esac
+}
+
+_jekt-completion() {
+  completions="$(ls "$PROJECTS_DIR")"
+  reply=("${(ps:\n:)completions}")
+}
+
+compctl -k '(browse new)' \
+  -x 'c[-1,browse]' -K _jekt-completion \
+  - 'c[-1,new]' -K _jekt-completion \
+  -- jekt
