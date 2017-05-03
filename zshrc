@@ -149,6 +149,6 @@ _load_settings "$HOME/.zsh/configs"
 
 EDITOR=vi
 PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
+export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash zsh)"

@@ -111,6 +111,7 @@ augroup vimrcEx
   autocmd BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
   autocmd BufNewFile,BufRead *liftoffrc set filetype=yaml
   autocmd BufNewFile,BufRead PULLREQ_EDITMSG set filetype=gitcommit
+  autocmd BufRead,BufNewFile Fastfile set filetype=ruby
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
