@@ -2,19 +2,22 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
+Plug 'elixir-lang/vim-elixir'
+Plug 'flowtype/vim-flow'
+Plug 'gcmt/wildfire.vim'
+Plug 'gfontenot/vim-xcode'
 Plug 'itchyny/lightline.vim'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'gcmt/wildfire.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'keith/swift.vim'
+Plug 'moll/vim-node'
+Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'keith/swift.vim'
-Plug 'gfontenot/vim-xcode'
 Plug 'scrooloose/syntastic'
-Plug 'flowtype/vim-flow'
-Plug 'mxw/vim-jsx'
-Plug 'moll/vim-node'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
 
 call plug#end()
@@ -122,6 +125,9 @@ augroup vimrcEx
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
+
+" Fuzzy find files with fzf
+nnoremap <leader>f :Files<CR>
 
 " Swift vim
 let g:xcode_run_command = 'VtrSendCommandToRunner! {cmd}'
