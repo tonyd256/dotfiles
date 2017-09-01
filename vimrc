@@ -15,7 +15,6 @@ Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
