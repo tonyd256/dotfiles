@@ -20,7 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
 " <Tab> indents or triggers autocomplete, smartly
 Plug 'ervandew/supertab'
-
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 let g:lightline = {
@@ -150,3 +150,7 @@ xnoremap < <gv
 xnoremap > >gv
 
 let g:flow#autoclose = 1
+
+map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
