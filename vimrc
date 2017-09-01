@@ -13,7 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
-Plug 'nanotech/jellybeans.vim'
+Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
