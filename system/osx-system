@@ -45,23 +45,11 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 echo "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 
-echo "Save screenshots to ~/Desktop/screenshots"
-defaults write com.apple.screencapture location ~/Desktop/screenshots
-
-echo "Enable highlight hover effect for the grid view of a stack (Dock)"
-defaults write com.apple.dock mouse-over-hilte-stack -bool true
-
-echo "Enable spring loading for all Dock items"
-defaults write enable-spring-load-actions-on-all-items -bool true
-
-echo "Show indicator lights for open applications in the Dock"
-defaults write com.apple.dock show-process-indicators -bool true
-
 echo "Disable press-and-hold for keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo "Set a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 echo "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
