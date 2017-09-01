@@ -18,6 +18,8 @@ Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
+" <Tab> indents or triggers autocomplete, smartly
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -56,6 +58,8 @@ set incsearch           " do incremental searching
 set ruler               " show the cursor position all the time
 set laststatus=2        " Always display the status line
 set autowrite
+set scrolloff=1   " When scrolling, keep cursor in the middle
+set shiftround    " When at 3 spaces and I hit >>, go to 4, not 5.
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -77,6 +81,15 @@ set numberwidth=5
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" Mnemonic: vgf = "vsplit gf"
+nnoremap vgf :vsplit<CR>gf<CR>
+" Mnemonic: sgf = "split gf"
+nnoremap sgf :split<CR>gf<CR>
+
+" Persistent undo
+set undofile " Create FILE.un~ files for persistent undo
+set undodir=~/.vim/undodir
 
 " Use the system pasteboard
 set clipboard=unnamed
@@ -129,11 +142,11 @@ augroup END
 " Fuzzy find files with fzf
 nnoremap <leader>f :Files<CR>
 
-" Swift vim
-let g:xcode_run_command = 'VtrSendCommandToRunner! {cmd}'
-let g:xcode_xcpretty_testing_flags = '--test'
+" no ex mode
+map Q <Nop>
 
-nnoremap <leader>b :XBuild<CR>
-nnoremap <leader>u :XTest<CR>
+" Automatically reselect text after in- or out-denting in visual mode
+xnoremap < <gv
+xnoremap > >gv
 
 let g:flow#autoclose = 1
