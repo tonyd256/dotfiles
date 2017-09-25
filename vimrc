@@ -21,6 +21,7 @@ Plug 'vim-scripts/tComment'
 " <Tab> indents or triggers autocomplete, smartly
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
+Plug 'raichoo/purescript-vim'
 call plug#end()
 
 let g:lightline = {
