@@ -1,7 +1,7 @@
 [user]
   name = Tony DiPasquale
   email = anthony.r.dipasquale@gmail.com
-  signingkey = Tony DiPasquale <tony@thoughtbot.com>
+  signingkey = Tony DiPasquale <anthony.r.dipasquale@gmail.com>
 [core]
   excludesfile = /Users/tony/.global_ignore
   editor = vim
@@ -34,3 +34,5 @@
   tool = vimdiff
 [diff "localizablestrings"]
   textconv = "iconv -f utf-16 -t utf-8"
+[gpg]
+	program = gpg2
