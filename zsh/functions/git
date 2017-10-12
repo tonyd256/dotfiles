@@ -2,4 +2,3 @@ gbd() { git push origin :"$1" && git branch -d "$1"; }
 gbdl() { git push origin :@{-1} && git branch -d @{-1}; }
 gbc() { git checkout -b "$1" && git push -u origin "$1"; }
 gfix() { git add . && git commit --amend -v; }
-co-pr() { git fetch origin pull/"$1"/head:pr/"$1" && git checkout pr/"$1"; }
