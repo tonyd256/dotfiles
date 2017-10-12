@@ -7,7 +7,7 @@ Plug 'flowtype/vim-flow'
 Plug 'gcmt/wildfire.vim'
 Plug 'gfontenot/vim-xcode'
 Plug 'itchyny/lightline.vim'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
@@ -22,6 +22,7 @@ Plug 'vim-scripts/tComment'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'raichoo/purescript-vim'
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 let g:lightline = {
