@@ -154,5 +154,6 @@ EDITOR=vi
 PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 eval "$(rbenv init - --no-rehash zsh)"
