@@ -157,4 +157,8 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/3.6/bin:$PATH"
+export PATH="$HOME/.esp/xtensa-esp32-elf/bin:$PATH"
+
+export IDF_PATH="$HOME/.esp/esp-idf"
+
 eval "$(rbenv init - --no-rehash zsh)"
