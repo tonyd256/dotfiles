@@ -23,6 +23,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'raichoo/purescript-vim'
 Plug 'jparise/vim-graphql'
+Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
 
 let g:lightline = {
