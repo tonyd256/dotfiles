@@ -161,4 +161,7 @@ export PATH="$HOME/.esp/xtensa-esp32-elf/bin:$PATH"
 
 export IDF_PATH="$HOME/.esp/esp-idf"
 
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 eval "$(rbenv init - --no-rehash zsh)"
