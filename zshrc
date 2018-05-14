@@ -71,10 +71,18 @@ colors
 export CLICOLOR=1
 
 # history settings
-setopt hist_ignore_all_dups inc_append_history
+setopt inc_append_history
+setopt hist_ignore_space
+setopt hist_ingore_dups_first
+setopt hist_ingore_dups
+setopt hist_ignore_all_dups
+setopt hist_verify
+setopt append_history
+setopt extended_history
+setopt share_history
 HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
+HISTSIZE=10000
+SAVEHIST=10000
 
 # awesome cd movements from zshkit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
