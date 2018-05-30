@@ -73,8 +73,6 @@ export CLICOLOR=1
 # history settings
 setopt inc_append_history
 setopt hist_ignore_space
-setopt hist_ingore_dups_first
-setopt hist_ingore_dups
 setopt hist_ignore_all_dups
 setopt hist_verify
 setopt append_history
