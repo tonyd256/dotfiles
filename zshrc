@@ -7,9 +7,9 @@ parse_git_dirty() {
   local STATUS=''
   STATUS=$(command git status --porcelain 2> /dev/null | tail -n1)
   if [[ -n $STATUS ]]; then
-    echo "%{$fg[red]%}✗"
+    echo "%F{red}✗"
   else
-    echo "%{$fg[green]%}✔"
+    echo "%F{green}✔"
   fi
 }
 
@@ -24,20 +24,6 @@ current_branch() {
   echo ${ref#refs/heads/}
 }
 
-put_spacing() {
-    local git=$(current_branch) || ""
-    git=${#git}
-
-    local termwidth
-    (( termwidth = ${COLUMNS} - 5 - ${#HOST} - ${#$(get_pwd)} - ${git} ))
-
-    local spacing=""
-    for i in {1..$termwidth}; do
-        spacing="${spacing} "
-    done
-    echo $spacing
-}
-
 git_prompt_info() {
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
@@ -46,8 +32,8 @@ git_prompt_info() {
 
 setopt promptsubst
 export PS1='
-%{$fg[cyan]%}%m: %{$fg[yellow]%}$(get_pwd)$(put_spacing)$(git_prompt_info)
-%{$fg[blue]%}→%{$reset_color%} '
+%F{cyan}%m: %F{yellow}$(get_pwd) $(git_prompt_info)
+%F{blue}→%f '
 
 # completion
 autoload -U compinit
