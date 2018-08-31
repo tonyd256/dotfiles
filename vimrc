@@ -25,6 +25,7 @@ Plug 'raichoo/purescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'alx741/stylish-haskell'
+Plug 'tomlion/vim-solidity'
 call plug#end()
 
 let g:lightline = {
