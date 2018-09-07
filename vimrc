@@ -33,6 +33,10 @@ let g:lightline = {
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'inactive': {
+      \   'left': [['filename'], ['modified']],
+      \   'right': [['lineinfo'], ['percent']]
       \ }
       \ }
 
