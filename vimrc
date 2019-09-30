@@ -27,6 +27,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'alx741/stylish-haskell'
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-liquid'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 let g:lightline = {
