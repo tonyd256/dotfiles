@@ -28,6 +28,7 @@ Plug 'alx741/stylish-haskell'
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-liquid'
 Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 let g:lightline = {
