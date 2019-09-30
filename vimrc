@@ -70,8 +70,9 @@ set incsearch           " do incremental searching
 set ruler               " show the cursor position all the time
 set laststatus=2        " Always display the status line
 set autowrite
-set scrolloff=1   " When scrolling, keep cursor in the middle
-set shiftround    " When at 3 spaces and I hit >>, go to 4, not 5.
+set scrolloff=1         " When scrolling, keep cursor in the middle
+set shiftround          " When at 3 spaces and I hit >>, go to 4, not 5.
+set ttimeoutlen=50      " Lower the key sequence delay.
 
 " Softtabs, 2 spaces
 set tabstop=2
