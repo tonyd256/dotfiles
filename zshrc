@@ -158,3 +158,12 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
 eval "$(rbenv init - --no-rehash zsh)"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+eval "$(direnv hook bash)"
