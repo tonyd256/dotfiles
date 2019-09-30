@@ -151,8 +151,8 @@ augroup vimrcEx
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 
-  " Turn off line wrapping for liquid files
-  autocmd BufRead,BufNewFile *.liquid setlocal textwidth=0
+  " Turn off line wrapping for liquid, css, sass, and html files
+  autocmd BufRead,BufNewFile *.liquid,css,scss,sass,html setlocal textwidth=0
 augroup END
 
 " Fuzzy find files with fzf
