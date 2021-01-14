@@ -36,3 +36,5 @@
   textconv = "iconv -f utf-16 -t utf-8"
 [gpg]
 	program = gpg2
+[init]
+	defaultBranch = main

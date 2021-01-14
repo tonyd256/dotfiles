@@ -152,6 +152,8 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/3.6/bin:$PATH"
 export PATH="$HOME/.esp/xtensa-esp32-elf/bin:$PATH"
 
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
 export IDF_PATH="$HOME/.esp/esp-idf"
 
 export NVM_DIR="$HOME/.nvm"
@@ -167,3 +169,13 @@ eval "$(rbenv init - --no-rehash zsh)"
 [[ -f /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tony/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
 eval "$(direnv hook bash)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tony/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tony/dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tony/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tony/dev/google-cloud-sdk/completion.zsh.inc'; fi
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
