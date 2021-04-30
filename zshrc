@@ -33,7 +33,7 @@ git_prompt_info() {
 setopt promptsubst
 export PS1='
 %F{cyan}%m: %F{yellow}$(get_pwd) $(git_prompt_info)
-%F{blue}→%f '
+%F{blue}→ %f '
 
 # completion
 autoload -U compinit

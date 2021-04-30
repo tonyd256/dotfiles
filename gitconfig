@@ -38,3 +38,5 @@
 	program = gpg2
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
