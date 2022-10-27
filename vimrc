@@ -5,10 +5,10 @@ call plug#begin('~/.vim/bundle')
 Plug 'elixir-lang/vim-elixir'
 Plug 'flowtype/vim-flow'
 Plug 'gcmt/wildfire.vim'
-Plug 'gfontenot/vim-xcode'
 Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
 Plug 'moll/vim-node'
@@ -73,6 +73,7 @@ set autowrite
 set scrolloff=1         " When scrolling, keep cursor in the middle
 set shiftround          " When at 3 spaces and I hit >>, go to 4, not 5.
 set ttimeoutlen=50      " Lower the key sequence delay.
+set nojoinspaces        " Only use one space after sentences
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -152,7 +153,7 @@ augroup vimrcEx
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 
   " Turn off line wrapping for liquid, css, sass, and html files
-  autocmd BufRead,BufNewFile *.liquid,css,scss,sass,html setlocal textwidth=0
+  autocmd FileType liquid,css,scss,sass,html setlocal textwidth=0
 augroup END
 
 " Fuzzy find files with fzf

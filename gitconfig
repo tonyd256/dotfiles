@@ -1,7 +1,7 @@
 [user]
   name = Tony DiPasquale
   email = anthony.r.dipasquale@gmail.com
-  signingkey = Tony DiPasquale <anthony.r.dipasquale@gmail.com>
+  signingkey = 7EAC38AED6ADD61A
 [core]
   excludesfile = /Users/tony/.global_ignore
   editor = vim
